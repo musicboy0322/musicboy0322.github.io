@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./drawStraws.js"></script>
+    <style>
+        button {
+            margin:30px;
+            width: 90px;
+            height: 40px;
+        }
+        p {
+            font-size: 35px;
+        }
+        a{
+            border-right-style: none;
+            flex-direction: column;
+        }
+        .container {
+            display: flex;
+        }
+    </style>
+    <title>台灣水果拼盤</title>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function() {
+        $(".east").click(function () {
+          let number = Math.trunc(Math.random() * 3);
+          document.getElementById("fruit").innerHTML = numberEast[number];
+          document.getElementById("picture").src = srcEast[number];
+        });
+      })
+    </script>
+    <nav>
+      <h1 class="headerTitle">台灣水果拼盤</h1>
+      <ul id="nav">
+        <li><a href="./index.html">首頁</a></li>
+        <li class="list">
+          <a href="./north/north.html">北部</a>
+          <ul class="list">
+            <li class="list first"><a href="./north/peach.html">水蜜桃</a></li>
+            <li class="list second"><a href="./north/ponkan.html">椪柑</a></li>
+            <li class="list thrid">
+              <a href="./north/persimmon.html">柿子</a>
+            </li>
+            <li class="list fourth">
+              <a href="./north/strawberry.html">草莓</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <a href="./west/west.html">中部</a>
+          <ul class="list">
+            <li class="list first"><a href="./west/pear.html">梨子</a></li>
+            <li class="list second">
+              <a href="./west/loquat.html">琵琶</a>
+            </li>
+            <li class="list thrid">
+              <a href="./west/grape.html">葡萄</a>
+            </li>
+            <li class="list fourth">
+              <a href="./west/mei.html">梅子</a>
+            </li>
+            <li class="list fifth">
+              <a href="./west/orange.html">橘子</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <a href="./south/south.html">南部</a>
+          <ul class="list">
+            <li class="list first">
+              <a href="./south/mango.html">芒果</a>
+            </li>
+            <li class="list second">
+              <a href="./south/pomelo.html">文旦柚</a>
+            </li>
+            <li class="list thrid">
+              <a href="./south/guava.html">芭樂</a>
+            </li>
+            <li class="list fourth">
+              <a href="./south/waxapple.html">蓮霧</a>
+            </li>
+          </ul>
+        </li>
+        <li class="list">
+          <a href="./east/east.html">東部</a>
+          <ul class="list">
+            <li class="list first"><a href="./east/sakyamuni.html">釋迦</a></li>
+          </ul>
+          <ul class="list">
+            <li class="list second">
+              <a href="./east/watermelon.html">西瓜</a>
+            </li>
+          </ul>
+          <ul class="list">
+            <li class="list thrid"><a href="./east/plum.html">李子</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <main style="display: block;">
+        <br>
+      <p id="fruit" style="text-align: center;">
+        水果為
+      </p>
+      <div style="text-align: center;">
+        <img src="./picture/問號.png" id="picture" width="600px" height="500px" style="align-self: center;""></img>
+      </div>
+      <div style="text-align: center;">
+        <button class="east">骰子</button>
+      </div>
+    </main>
+  </body>
+</html>
